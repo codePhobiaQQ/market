@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# maket
+/divisima
+
 # testing
 /coverage
 
