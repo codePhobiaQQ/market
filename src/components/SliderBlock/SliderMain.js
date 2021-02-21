@@ -3,26 +3,26 @@ import Slider from "react-slick";
 import img1 from '../../img/bg.jpg'
 import img2 from '../../img/bg-2.jpg'
 import classes from './SliderMain.css'
+import {useSelector} from "react-redux";
 
 export default function SliderMain() {
-  console.log(classes)
 
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: 'mainSlider'
-  };
+  const slide = useSelector((state) => state.sliderFirst)
+  console.log(slide)
+
+
   return (
-    <Slider {...settings}>
-      <div>
-        <img src={img1} alt=""/>
-      </div>
-      <div>
-        <img src={img2} alt=""/>
-      </div>
+    <Slider {...slide.settings}>
+      {slide.slides.map((slide, index) => {
+        return (
+          <div key={index} className='wrapperSlide'>
+            <img src={slide.img} alt="index"/>
+            <h1>{slide.title}</h1>
+            <p>{slide.subtitle}</p>
+            <button className="site-btn">Подробнее</button>
+          </div>
+        )
+      })}
     </Slider>
   );
 }

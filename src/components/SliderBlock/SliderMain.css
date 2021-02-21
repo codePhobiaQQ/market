@@ -1,3 +1,29 @@
+.mainSlider h1, .mainSlider p {
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    top: calc(50% - 1.5em);
+    left: 50px;
+}
+
+.mainSlider p {
+    font-size: 30px;
+    top: calc(50% - 20px);
+}
+.mainSlider img {
+    z-index: 5;
+    position: relative;
+}
+
+.mainSlider button {
+    z-index: 5;
+    position: absolute !important;
+    top: calc(50% + 40px);
+    left: 50px;
+    position: relative;
+}
+
+
 /* Слайдер */
 .slick-slider{}
 /* Слайдер запущен */
@@ -14,7 +40,9 @@
     display: flex;
 }
 /* Слайд */
-.slick-slide{}
+.slick-slide{
+    position: relative;
+}
 /* Слайд активный (показывается) */
 .slick-slide.slick-active{}
 /* Слайд основной */
