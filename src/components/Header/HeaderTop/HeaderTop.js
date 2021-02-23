@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../../../img/logo.png";
+import CardButton from "./CardButton/CardButton";
 // import classes from './HeaderTop.module.sass'
 
 const HeaderTop = props => {
@@ -8,11 +9,9 @@ const HeaderTop = props => {
       <div className="container">
         <div className="row">
           <div className="col-lg-2 text-center text-lg-left">
-
             <a href="/" className="site-logo">
               <img src={logo} alt="" />
             </a>
-
           </div>
           <div className="col-xl-6 col-lg-5">
             <form className="header-search-form">
@@ -26,13 +25,7 @@ const HeaderTop = props => {
                 <i className="flaticon-profile"></i>
                 <a href="#">Sign</a> In or <a href="#">Create Account</a>
               </div>
-              <div className="up-item">
-                <div className="shopping-card">
-                  <i className="flaticon-bag"></i>
-                  <span>0</span>
-                </div>
-                <a href="#">Shopping Cart</a>
-              </div>
+              <CardButton />
             </div>
           </div>
         </div>

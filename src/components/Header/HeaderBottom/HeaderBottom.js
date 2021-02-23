@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 // import classes from './HeaderBottom.module.sass'
 
 const HeaderBottom = props => {
@@ -6,28 +7,28 @@ const HeaderBottom = props => {
     <nav className="main-navbar">
       <div className="container">
         <ul className="main-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Jewelry
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/women">Women</NavLink></li>
+          <li><NavLink to="/men">Men</NavLink></li>
+          <li><NavLink to="/Jewelry">Jewelry
             <span className="new">New</span>
-          </a></li>
+          </NavLink></li>
           <li><a href="#">Shoes</a>
             <ul className="sub-menu">
-              <li><a href="#">Sneakers</a></li>
-              <li><a href="#">Sandals</a></li>
-              <li><a href="#">Formal Shoes</a></li>
-              <li><a href="#">Boots</a></li>
-              <li><a href="#">Flip Flops</a></li>
+              <li><NavLink to="#">Sneakers</NavLink></li>
+              <li><NavLink to="#">Sandals</NavLink></li>
+              <li><NavLink to="#">Formal Shoes</NavLink></li>
+              <li><NavLink to="#">Boots</NavLink></li>
+              <li><NavLink to="#">Flip Flops</NavLink></li>
             </ul>
           </li>
           <li><a href="#">Pages</a>
             <ul className="sub-menu">
-              <li><a href="./product.html">Product Page</a></li>
-              <li><a href="./category.html">Category Page</a></li>
-              <li><a href="./cart.html">Cart Page</a></li>
-              <li><a href="./checkout.html">Checkout Page</a></li>
-              <li><a href="./contact.html">Contact Page</a></li>
+              <li><NavLink to="./product.html">Product Page</NavLink></li>
+              <li><NavLink to="./category.html">Category Page</NavLink></li>
+              <li><NavLink to="./cart.html">Cart Page</NavLink></li>
+              <li><NavLink to="./checkout.html">Checkout Page</NavLink></li>
+              <li><NavLink to="./contact.html">Contact Page</NavLink></li>
             </ul>
           </li>
           <li><a href="#">Blog</a></li>

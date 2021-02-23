@@ -1,0 +1,20 @@
+.product-item {
+    padding: 0 15px
+}
+
+.container {
+    position: relative;
+}
+
+.LatestProductBtn {
+    position: absolute;
+    top: calc(50% - 10px);
+}
+
+.LatestProductPrev {
+    left: -20px;
+}.LatestProductNext {
+    left: inherit;
+    right: -20px;
+    transform: rotate(180deg);
+}
