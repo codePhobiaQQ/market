@@ -9,7 +9,6 @@ const CardPopup = props => {
   const test = useSelector(state => state.CardReducer.isOpened)
 
   const clickHandler = (event) => {
-    console.log('cliced ivent')
     !event.path.includes(popupTarget.current) && dispatch(closeCardPopup())
   }
 
@@ -19,7 +18,6 @@ const CardPopup = props => {
     document.addEventListener('click', clickHandler)
     return () => {
       document.removeEventListener('click', clickHandler)
-      console.log('END')
     }
   }, [test])
 

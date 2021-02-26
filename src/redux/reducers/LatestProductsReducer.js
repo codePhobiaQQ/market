@@ -4,6 +4,7 @@ import slide3 from '../../img/product/3.jpg'
 import slide4 from '../../img/product/4.jpg'
 import slide5 from '../../img/product/5.jpg'
 import slide6 from '../../img/product/6.jpg'
+import {FETCH_LATEST_PRODUCTS, HIDE_LOADER} from "../types";
 
 
 const initialState = {
@@ -53,11 +54,17 @@ const initialState = {
     slidesToShow: 4,
     slidesToScroll: 1,
     className: 'LatestProducts',
-  }
+  },
+  loading: true
 }
 
 export const LatestProductsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_LATEST_PRODUCTS:
+      // return {...state, slides: action.payload}
+      return {...state}
+    case HIDE_LOADER:
+      return {...state, loading: false}
     default: return state
   }
 }

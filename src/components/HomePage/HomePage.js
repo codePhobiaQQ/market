@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import SliderMain from "./SliderBlock/SliderMain";
 import FeaturesSection from "./FeaturesSection/FeaturesSection";
 import LatestProducts from "./LatestProducts/LatestProducts";
+import ProductsCategories from "./ProductsCategories/ProductsCategories";
 
 const HomePage = props => {
   return (
@@ -11,6 +12,7 @@ const HomePage = props => {
       <SliderMain />
       <FeaturesSection />
       <LatestProducts />
+      <ProductsCategories />
     </>
   );
 };

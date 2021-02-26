@@ -1,9 +1,23 @@
 import React from 'react'
 import logo from "../../../img/logo.png";
 import CardButton from "./CardButton/CardButton";
+import {useDispatch, useSelector} from "react-redux";
+import {shawSingIn, shawSingUp} from "../../../redux/actions";
 // import classes from './HeaderTop.module.sass'
 
 const HeaderTop = props => {
+
+  const dispatch = useDispatch()
+
+  const SingInHandler = (event) => {
+    event.preventDefault()
+    dispatch(shawSingIn())
+  }
+  const SingUpHandler = (event) => {
+    event.preventDefault()
+    dispatch(shawSingUp())
+  }
+
   return (
     <div className="header-top">
       <div className="container">
@@ -23,7 +37,7 @@ const HeaderTop = props => {
             <div className="user-panel">
               <div className="up-item">
                 <i className="flaticon-profile"></i>
-                <a href="#">Sign</a> In or <a href="#">Create Account</a>
+                <a href="#" onClick={(event) => SingInHandler(event)}>Sign</a> In or <a href="#" onClick={(event) => SingUpHandler(event)}>Create Account</a>
               </div>
               <CardButton />
             </div>

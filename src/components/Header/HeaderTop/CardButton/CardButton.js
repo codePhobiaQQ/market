@@ -24,7 +24,6 @@ const CardButton = props => {
       <CardPopup
         products={infoCard.products}
       /> }
-
     </div>
   );
 };
