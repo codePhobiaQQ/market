@@ -1,0 +1,4 @@
+{
+  "port": 8080,
+  "mongoUri": "mongodb+srv://vitalik:Vitalik2007@cluster0.rowsr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}

@@ -1,0 +1,65 @@
+.CardPopup {
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    position: absolute;
+    background-color: #fff;
+    -webkit-box-shadow: 10px 10px 47px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 47px -12px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 47px -12px rgba(0,0,0,0.75);
+    right: 0;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.cardProduct {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cardProduct span {
+    display: block;
+}
+
+.cardProduct h3 {
+    font-size: 20px;
+}
+
+.cardProduct span {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cardProduct img {
+    width: 50px;
+    height: auto;
+}
+
+.cardProduct .productActionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardProduct .plusProduct,
+.cardProduct .minusProduct {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.cardProduct .plusProduct {
+    margin-bottom: 10px;
+}
+
+.cardProduct .minusProduct:hover,
+.cardProduct .plusProduct:hover {
+    background-color: #000;
+    color: #fff;
+}
